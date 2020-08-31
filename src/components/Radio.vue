@@ -6,9 +6,9 @@
             <span>{{ data.title }}</span>
         </div>
         <div class="content">
-            <el-radio-group v-model="value">
-                <el-radio v-for="item in data.data" :key="item.option" class="options" :label="item.option">{{ item.title }}</el-radio>
-            </el-radio-group>
+            <a-radio-group v-model="value">
+                <a-radio v-for="item in data.data" :key="item.option" class="options" :value="item.option">{{ item.title }}</a-radio>
+            </a-radio-group>
         </div>
     </div>
 </template>

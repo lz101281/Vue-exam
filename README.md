@@ -1,24 +1,25 @@
-# vue-exam
+## 这是一个开源考试系统
 
-## Project setup
-```
-yarn install
-```
+### 前端计划
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+#### PC考试页面
 
-### Compiles and minifies for production
-```
-yarn build
-```
+* [x]     答题
+* [ ]     倒计时交卷
+* [ ]     登录
+* [ ]     选择试卷
 
-### Lints and fixes files
-```
-yarn lint
-```
+#### 后台录题页面
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* [ ]     管理题库
+* [ ]     权限管理
+
+
+#### 小程序答题
+
+* [ ]     答题
+* [ ]     登录
+* [ ]     分享
+
+
+### 后端计划

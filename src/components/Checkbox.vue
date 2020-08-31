@@ -6,20 +6,16 @@
             <span>{{ data.title }}</span>
         </div>
         <div class="content">
-            <Button>{{ data.title }}</Button>
-            <!-- <a-checkbox-group v-model="values">
-                <a-checkbox class="options" v-for="item in data.data" :key="item.option" :label="item.option" :value="item.option">{{
-                    item.title
-                }}</a-checkbox>
-            </a-checkbox-group> -->
+            <a-checkbox-group v-model="values">
+                <a-checkbox class="options" v-for="item in data.data" :key="item.option" :value="item.option">
+                    {{ item.title }}
+                </a-checkbox>
+            </a-checkbox-group>
         </div>
-        <!-- <el-button style="margin-top: 10px" size="medium" type="primary" @click="submitData">提交</el-button> -->
     </div>
 </template>
 
 <script>
-import { Button } from "ant-design-vue"
-
 export default {
     data() {
         return {
@@ -35,8 +31,6 @@ export default {
             console.log(this.values)
         },
     },
-
-    components: [Button],
 }
 </script>
 
@@ -48,5 +42,6 @@ export default {
 .options {
     width: 100%;
     margin-top: 10px;
+    margin-left: 0px !important;
 }
 </style>

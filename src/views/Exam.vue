@@ -1,17 +1,17 @@
 <template>
     <div class="exam_content">
-        <el-row :gutter="40">
-            <el-col :span="18" style="background: white; padding: 15px;">
+        <a-row :gutter="40">
+            <a-col :span="18" style="background: white; padding: 15px;">
                 <div v-for="(item, index) in data" :key="item.option">
                     <Radio v-if="item.type === 'radio'" :data="item" :order="index + 1" />
                     <Checkbox v-if="item.type === 'checkbox'" :data="item" :order="index + 1" />
                     <Describe v-if="item.type === 'describe'" :data="item" :order="index + 1" />
                 </div>
-            </el-col>
-            <el-col :span="6">
+            </a-col>
+            <a-col :span="6">
                 <AnswerSheet :data="data" />
-            </el-col>
-        </el-row>
+            </a-col>
+        </a-row>
     </div>
 </template>
 

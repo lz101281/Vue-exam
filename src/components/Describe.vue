@@ -6,8 +6,7 @@
             <span>{{ data.title }}</span>
         </div>
         <div class="content">
-            <el-input type="textarea" class="textarea_content" :autosize="{ minRows: 2, maxRows: 4 }" placeholder="请输入内容" v-model="value">
-            </el-input>
+            <a-input type="textarea" class="textarea_content" placeholder="请输入内容" v-model="value"> </a-input>
         </div>
     </div>
 </template>
