@@ -7,7 +7,9 @@
         </div>
         <div class="content">
             <a-radio-group v-model="value">
-                <a-radio v-for="item in data.data" :key="item.option" class="options" :value="item.option">{{ item.title }}</a-radio>
+                <a-radio v-for="item in data.data" :key="item.option" class="options" :value="item.option">
+                    {{ item.title }}
+                </a-radio>
             </a-radio-group>
         </div>
     </div>
