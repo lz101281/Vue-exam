@@ -1,11 +1,17 @@
 <template>
-    <div class="home">
-        <Exam :data="datas" />
-    </div>
+    <a-layout class="home">
+        <Header />
+        <a-layout-content>
+            <Exam :data="datas" />
+        </a-layout-content>
+        <Footer />
+    </a-layout>
 </template>
 
 <script>
 import Exam from "./Exam"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 export default {
     name: "Home",
@@ -36,20 +42,13 @@ export default {
                     title: "什么是浏览器最强语言？",
                     type: "describe",
                 },
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
-                {},
             ],
         }
     },
     components: {
         Exam,
+        Footer,
+        Header,
     },
 }
 </script>

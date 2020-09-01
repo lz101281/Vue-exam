@@ -6,7 +6,7 @@
             <span>{{ data.title }}</span>
         </div>
         <div class="content">
-            <a-checkbox-group v-model="values">
+            <a-checkbox-group v-model="values" @change="changeValue">
                 <a-checkbox class="options" v-for="item in data.data" :key="item.option" :value="item.option">
                     {{ item.title }}
                 </a-checkbox>
@@ -24,11 +24,15 @@ export default {
         }
     },
 
-    props: ["data", "order"],
+    props: {
+        data: Object,
+        order: Number,
+        submitData: Function,
+    },
 
     methods: {
-        submitData() {
-            console.log(this.values)
+        changeValue() {
+            this.submitData(this.order, this.data.type, this.values)
         },
     },
 }

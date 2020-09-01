@@ -6,7 +6,7 @@
             <span>{{ data.title }}</span>
         </div>
         <div class="content">
-            <a-radio-group v-model="value">
+            <a-radio-group v-model="value" @change="changeValue">
                 <a-radio v-for="item in data.data" :key="item.option" class="options" :value="item.option">
                     {{ item.title }}
                 </a-radio>
@@ -20,15 +20,18 @@ export default {
     data() {
         return {
             value: "",
-            title: "下列哪个是浏览器最强语言？",
         }
     },
 
-    props: ["data", "order"],
+    props: {
+        data: Object,
+        order: Number,
+        submitData: Function,
+    },
 
     methods: {
-        submitData() {
-            console.log(this.value)
+        changeValue() {
+            this.submitData(this.order, this.data.type, this.value)
         },
     },
 }

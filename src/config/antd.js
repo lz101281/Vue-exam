@@ -1,5 +1,23 @@
 import Vue from "vue"
-import { Button, Checkbox, Radio, Input, message, notification, Modal, Row, Col, Statistic } from "ant-design-vue"
+import {
+    Button,
+    Checkbox,
+    Radio,
+    Input,
+    message,
+    notification,
+    Modal,
+    Row,
+    Col,
+    Statistic,
+    Layout,
+    Avatar,
+    Menu,
+    Icon,
+    Dropdown,
+    Form,
+    ConfigProvider,
+} from "ant-design-vue"
 
 Vue.prototype.$message = message
 Vue.prototype.$notification = notification
@@ -18,3 +36,10 @@ Vue.use(Radio)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Statistic)
+Vue.use(Layout)
+Vue.use(Avatar)
+Vue.use(Menu)
+Vue.use(Icon)
+Vue.use(Dropdown)
+Vue.use(Form)
+Vue.use(ConfigProvider)

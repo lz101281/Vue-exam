@@ -6,7 +6,14 @@
             <span>{{ data.title }}</span>
         </div>
         <div class="content">
-            <a-input type="textarea" class="textarea_content" placeholder="请输入内容" v-model="value"> </a-input>
+            <a-input
+                type="textarea"
+                class="textarea_content"
+                placeholder="请输入内容"
+                v-model="value"
+                @change="changeValue"
+            >
+            </a-input>
         </div>
     </div>
 </template>
@@ -19,11 +26,15 @@ export default {
         }
     },
 
-    props: ["data", "order"],
+    props: {
+        data: Object,
+        order: Number,
+        submitData: Function,
+    },
 
     methods: {
-        submitData() {
-            console.log(this.value)
+        changeValue() {
+            this.submitData(this.order, this.data.type, this.value)
         },
     },
 }
